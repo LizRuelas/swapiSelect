@@ -18,23 +18,23 @@ $(document).ready(function(){
 				$("#species").append('<option value ="' + specie.people+ '">' + specie.name + '</option>');
 		});
 	};
-	$.getJSON("http://swapi.co/api/species/",formatoOption);
+	$.getJSON("https://swapi.co/api/species/",formatoOption);
 	var formatoFiltro = function(response){
+			var personajes2 = "";
 			personajes2 +=template.replace("{{name}}" , response.name)
+			$("#people").append(personajes2);
+				personajes2= "";	
 	}
-	var personajes2 = "";
 
 	$("#species").change(function(e) {
 		var people = $(this).val().split(',');
 		var l = people.length;
+		$("#people").html("");
 		for (var i = 0; i < l; i++) {
 			var ja = people[i].substr(-3);
-			link = "http://swapi.co/api/people/"+ja;
+			link = "https://swapi.co/api/people/"+ja;
 			console.log(link);
-			//$("#people").append(personajes);
 			$.getJSON(link,formatoFiltro);
-			$("#people").html(personajes2);
-			personajes2= "";	
 		}
 	});
 	
