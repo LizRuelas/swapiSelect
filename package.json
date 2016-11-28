@@ -4,12 +4,20 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "Liz Ruelas",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LizRuelas/swapiSelect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LizRuelas/swapiSelect/issues"
+  },
+  "homepage": "https://github.com/LizRuelas/swapiSelect#readme",
   "dependencies": {
     "express": "^4.14.0"
-  },
-  
+  }
 }
